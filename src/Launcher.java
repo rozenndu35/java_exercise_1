@@ -7,8 +7,9 @@ public class Launcher {
 	public static void main(String args[]){  
 		System.out.println("Bienvenu!");  
 		String saisie = scanner.nextLine();
-		if (!saisie.equals("quit")) {
+		while (!saisie.equals("quit")) {
 			System.out.println("Unknown command");
+			saisie = scanner.nextLine();
 		}
 	} 
 
