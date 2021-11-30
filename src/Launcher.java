@@ -18,6 +18,7 @@ public class Launcher {
 		listCommandes.add(new Fibo());
 		listCommandes.add(new Freq());
 		listCommandes.add(new Quit());
+		listCommandes.add(new Predict());
 		
 		boolean command = false;
 		while (!command) {

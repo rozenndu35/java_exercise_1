@@ -59,7 +59,7 @@ public class Freq implements Command {
         } 
         catch (IOException e) 
         {
-        	System.out.println("Unreadable file: Launcher " + e);
+        	System.out.println("Unreadable file: Freq " + e);
         }finally {
         	return false;
 		}
