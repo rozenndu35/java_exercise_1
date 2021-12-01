@@ -23,10 +23,10 @@ public class Predict implements Command {
         try
         {
         	//Initialisation
-            String content = Files.readString(filePath);
-            String contentMaj = content.toUpperCase();
-            String cantentNoPonctu = contentMaj.replaceAll("[^A-Z]"," ");
-            String[] mots = cantentNoPonctu.split(" ");
+        	String content = Files.readString(filePath);
+            String cantentNoPonctu = content.replaceAll("[^a-zA-Zéèçàùêîûôâ]"," ");
+            String contentMaj = cantentNoPonctu.toUpperCase();
+            String[] mots = contentMaj.split(" ");
             List<Mot> listeMots = new ArrayList<Mot>();
             int index = 0;
             while (index < mots.length){

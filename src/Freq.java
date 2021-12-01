@@ -22,11 +22,12 @@ public class Freq implements Command {
         try
         {
             String content = Files.readString(filePath);
-            String contentMaj = content.toUpperCase();
-            String cantentNoPonctu = contentMaj.replaceAll("[^A-Z]"," ");
-            String[] mots = cantentNoPonctu.split(" ");
+            String cantentNoPonctu = content.replaceAll("[^a-zA-Zéèçàùêîûôâ]"," ");
+            String contentMaj = cantentNoPonctu.toUpperCase();
+            String[] mots = contentMaj.split(" ");
             ArrayList<String> listeMots = new ArrayList<String>();
             ArrayList<Integer> listeNombre = new ArrayList<Integer>();
+            
             for(String mot : mots) {
             	if(!mot.isEmpty()) {
             		if(!listeMots.contains(mot)) {
