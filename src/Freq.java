@@ -55,7 +55,7 @@ public class Freq implements Command {
             	}
             	i++;
             }
-            System.out.println("Les 3 mots les plus souvent sont : " + listeMots.get(index0) +" "+ listeNombre.get(index0)+ "* " + listeMots.get(index1)+" "+ listeNombre.get(index1)+ "* "  +listeMots.get(index2) +" "+ listeNombre.get(index2)+ "*" );
+            System.out.println(listeMots.get(index2) +" " + listeMots.get(index1)+" "  +listeMots.get(index0) );
         } 
         catch (IOException e) 
         {
