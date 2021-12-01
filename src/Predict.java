@@ -52,6 +52,8 @@ public class Predict implements Command {
             			}
             		}
             		index=j;
+            	}else {
+            		index ++;
             	}
             }
             
@@ -85,7 +87,7 @@ public class Predict implements Command {
             		}
             		
             	}
-            	System.out.println("La phrase créér : " + phrase);
+            	System.out.println(phrase);
             	
             }
             
