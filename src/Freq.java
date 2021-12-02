@@ -39,21 +39,29 @@ public class Freq implements Command {
             	}
             }
             
-            int index0 = 0;
-            int index1 = 0;
-            int index2 = 0;
+            int index0 = -1;
+            int index1 = -1;
+            int index2 = -1;
             int i = 0;
+            
             for(Integer elem: listeNombre){
-            	if(listeNombre.get(index2)  <= elem) {
-            		index0 = index1;
-            		index1 = index2;
+            	if(index2 == -1) {
             		index2 = i;
-            	}else if(listeNombre.get(index1)  <= elem) {
-            		index0 = index1;
+            	}else if(listeNombre.get(index2) <= elem) {
+                		index0 = index1;
+                		index1 = index2;
+                		index2 = i;
+            	}else if(index1 == -1) {
             		index1 = i;
-            	}else if(listeNombre.get(index0)  <= elem) {
+                }else if(listeNombre.get(index1) <= elem) {
+                		index0 = index1;
+                		index1 = i;
+                }else if(index0 == -1) {
             		index0 = i;
-            	}
+                }else if(listeNombre.get(index0) <= elem) {
+                		index0 = i;
+                }
+            	
             	i++;
             }
             System.out.println(listeMots.get(index2).toLowerCase() + " " + listeMots.get(index1).toLowerCase()+ " "  +listeMots.get(index0).toLowerCase() );
