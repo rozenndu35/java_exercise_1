@@ -56,7 +56,7 @@ public class Freq implements Command {
             	}
             	i++;
             }
-            System.out.println(listeMots.get(index2) +" " + listeMots.get(index1)+" "  +listeMots.get(index0) );
+            System.out.println(listeMots.get(index2).toLowerCase() + " " + listeMots.get(index1).toLowerCase()+ " "  +listeMots.get(index0).toLowerCase() );
         } 
         catch (IOException e) 
         {

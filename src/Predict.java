@@ -71,7 +71,7 @@ public class Predict implements Command {
             	throw new MotNonTrouver("Le mot ne fait pas partie du texte d'initialisation!");
             }else {
             	int phraseLong = 1;
-            	String phrase = motClient;
+            	String phrase = motClient.toLowerCase();
             	Mot oldMot = motPresent;
             	boolean peuContinue = true;
             	while (phraseLong < 20 && peuContinue && oldMot != null) {
